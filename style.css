@@ -1,0 +1,144 @@
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#results-container {
+  margin-top: 50px;
+ padding: 20px;
+background-color: #f5f5f5;
+border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+input[type="number"] {
+width: 100%;
+}
+}
+
+@media (max-width: 600px) {
+.container {
+padding: 10px;
+}
+
+h1 {
+font-size: 20px;
+}
+
+h2 {
+font-size: 16px;
+}
+
+label {
+font-size: 14px;
+}
+
+input[type="number"] {
+width: 100%;
+font-size: 14px;
+margin-bottom: 10px;
+}
+
+button {
+font-size: 14px;
+}
+
+#results-container {
+margin-top: 30px;
+}
+}
+
+@media (min-width: 1200px) {
+.container {
+max-width: 1000px;
+}
+}
+
+/* Add new CSS design for the form input labels */
+.discount-input-container label {
+display: inline-block;
+width: 150px;
+text-align: right;
+margin-right: 10px;
+}
+
+/* Add new CSS design for the form input fields */
+.discount-input-container input[type="number"] {
+width: 100px;
+margin-right: 10px;
+}
+
+/* Add new CSS design for the button in the form */
+button[type="submit"] {
+background-color: #0066CC;
+margin-top: 20px;
+}
+
+body {
+  background-color: #f2f2f2;
+}
