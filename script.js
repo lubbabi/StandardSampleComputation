@@ -54,20 +54,19 @@ form.addEventListener('submit', (event) => {
   });
 
   resultsContainer.innerHTML = `
-    <h2>Results:</h2>
-    <p>Net Selling Price: ${formatter.format(netSellingPrice)}</p>
+    <h2 style="text-align:center"> > RESULT < </h2>
+    <p style="color:white"> Net Selling Price: ${formatter.format(netSellingPrice)}</p>
 	<br>
-    <p>VAT (12%): ${formatter.format(vat)}</p>
-    <p>Other Fees (8%): ${formatter.format(otherFees)}</p>
+    <p style="color:white"> VAT (12%): ${formatter.format(vat)}</p>
+    <p style="color:white"> Other Fees (8%): ${formatter.format(otherFees)}</p>
 	<br>
-    <p>Total Contract Price: ${formatter.format(totalContractPrice)}</p>
+    <p style="color:white"> Total Contract Price: ${formatter.format(totalContractPrice)}</p>
 	<br>
-    <p>Down Payment (20%): ${formatter.format(downPayment)}</p>
-    <p>Net Down Payment: ${formatter.format(netDownPayment)}</p>
-	<p> No. of Months: 72 Months </p>
-	<p>Monthly Amortization: ${formatter.format(monthlyAmortization)}</p>
+    <p style="color:white"> Down Payment (20%): ${formatter.format(downPayment)}</p>
+    <p style="color:white"> Net Down Payment: ${formatter.format(netDownPayment)}</p>
+	<p style="color:white"> No. of Months: 72 Months </p>
+	<p style="color:white"> Monthly Amortization: ${formatter.format(monthlyAmortization)}</p>
 	<br><br>
-    <p>Balance Payment: ${formatter.format(balancePayment)}</p>
-    
+    <p style="color:white" > Balance Payment: ${formatter.format(balancePayment)}</p>
   `;
 });
