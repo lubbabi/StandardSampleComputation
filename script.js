@@ -5,13 +5,34 @@ const bodyElement = document.body;
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const usp = parseFloat(document.getElementById('unit-selling-price').value);
+  const uspInput = document.getElementById('unit-selling-price');
+  let usp = null;
+
+  // Check if the input value is a valid number
+  if (!isNaN(uspInput.value) && uspInput.value.trim() !== '') {
+    usp = parseFloat(uspInput.value);
+  } else {
+    // Display an error message to the user
+    alert('Please enter a valid numeric value for Unit Selling Price');
+    return;
+  }
 
   let totalDiscount = 0;
   let nusp = usp;
 
   for (let i = 1; i <= 4; i++) {
-    const discount = parseFloat(document.getElementById(`discount${i}`).value);
+    const discountInput = document.getElementById(`discount${i}`);
+    let discount = null;
+
+    // Check if the discount input value is a valid number
+    if (!isNaN(discountInput.value) && discountInput.value.trim() !== '') {
+      discount = parseFloat(discountInput.value);
+    } else {
+      // Display an error message to the user
+      alert(`Please enter a valid numeric value for Discount ${i}`);
+      return;
+    }
+
     const discountAmount = nusp * discount / 100;
     totalDiscount += discount;
 
@@ -35,12 +56,18 @@ form.addEventListener('submit', (event) => {
   resultsContainer.innerHTML = `
     <h2>Results:</h2>
     <p>Net Selling Price: ${formatter.format(netSellingPrice)}</p>
+	<br>
     <p>VAT (12%): ${formatter.format(vat)}</p>
     <p>Other Fees (8%): ${formatter.format(otherFees)}</p>
+	<br>
     <p>Total Contract Price: ${formatter.format(totalContractPrice)}</p>
+	<br>
     <p>Down Payment (20%): ${formatter.format(downPayment)}</p>
     <p>Net Down Payment: ${formatter.format(netDownPayment)}</p>
+	<p> No. of Months: 72 Months </p>
+	<p>Monthly Amortization: ${formatter.format(monthlyAmortization)}</p>
+	<br><br>
     <p>Balance Payment: ${formatter.format(balancePayment)}</p>
-    <p>Monthly Amortization: ${formatter.format(monthlyAmortization)}</p>
+    
   `;
 });
