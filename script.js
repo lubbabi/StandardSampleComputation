@@ -70,3 +70,54 @@ form.addEventListener('submit', (event) => {
     <p style="color:white" > Balance Payment: ${formatter.format(balancePayment)}</p>
   `;
 });
+
+  const audio = document.getElementById("audio-player");
+  const playPauseButton = document.getElementById("play-pause-button");
+  const previousButton = document.getElementById("previous-button");
+  const nextButton = document.getElementById("next-button");
+  const audioElement = document.querySelector('audio');
+  audioElement.volume = 0.2; // Change 0.2 to adjust
+
+  let isPlaying = false;
+  const audioSources = [
+    "Sugar-Cookie.mp3",
+    "Soso.mp3",
+    "Tea-Time.mp3"
+  ];
+  let currentAudioIndex = 0;
+
+  function playAudio() {
+    audio.play();
+    playPauseButton.innerText = "Pause";
+    isPlaying = true;
+  }
+
+  function pauseAudio() {
+    audio.pause();
+    playPauseButton.innerText = "Play";
+    isPlaying = false;
+  }
+
+  function togglePlayPause() {
+    if (isPlaying) {
+      pauseAudio();
+    } else {
+      playAudio();
+    }
+  }
+
+  function playNextTrack() {
+    currentAudioIndex = (currentAudioIndex + 1) % audioSources.length;
+    audio.src = audioSources[currentAudioIndex];
+    playAudio();
+  }
+
+  function playPreviousTrack() {
+    currentAudioIndex = (currentAudioIndex - 1 + audioSources.length) % audioSources.length;
+    audio.src = audioSources[currentAudioIndex];
+    playAudio();
+  }
+
+  playPauseButton.addEventListener("click", togglePlayPause);
+  nextButton.addEventListener("click", playNextTrack);
+  previousButton.addEventListener("click", playPreviousTrack);

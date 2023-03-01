@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sample Computation ( •_•) </title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<style>
+    body, button, input, label {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+  <body>
+    <div class="main-container">
+      <h2 style="text-align:center; color:white"> STANDARD SAMPLE COMPUTATION </h2>
+      <form id="computation-form">
+        <label style="color:white" for="unit-selling-price"> Unit Selling Price:</label>
+        <input type="number" id="unit-selling-price" name="unit-selling-price" step="any" required>
+        <div id="discount-container">
+          <h2 style="color:white; text-align:center;"> > Discounts < </h2>
+          <div class="discount-input-container">
+            <label style="color:white" for="discount1"> Discount 1: </label> 
+            <input type="number" id="discount1" name="discount1" required>
+          </div>
+          <div class="discount-input-container">
+            <label style="color:white" for="discount2"> Discount 2: </label> 
+            <input type="number" id="discount2" name="discount2" required>
+          </div>
+          <div class="discount-input-container">
+            <label style="color:white" for="discount3"> Discount 3: </label> 
+            <input type="number" id="discount3" name="discount3" required>
+          </div>
+          <div class="discount-input-container">
+            <label style="color:white" for="discount4"> Discount 4: </label> 
+            <input type="number" id="discount4" name="discount4" required>
+          </div>
+        </div>
+        <button class="glow-on-hover" type="submit"> Calculate </button>
+      </form>
+      <div id="results-container"></div>
+    </div>
+	<div class="audio-container">
+  <h3 style="text-align:center; color:white"> Background Music </h3>
+  <div class="button-container">
+    <button id="previous-button" class="glow-on-hover" type="button">Previous</button>
+    <button id="play-pause-button" class="glow-on-hover" type="button">Play</button>
+    <button id="next-button" class="glow-on-hover" type="button">Next</button>
+    <audio id="audio-player" loop>
+      <source src="Sugar-Cookie.mp3" type="audio/mp3">
+      <source src="Soso.mp3" type="audio/mp3">
+      <source src="Tea-Time.mp3" type="audio/mp3">
+    </audio>
+  </div>
+  <script src="script.js"></script>
+</div>
+  </body>
+</html>

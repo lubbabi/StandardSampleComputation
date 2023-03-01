@@ -1,153 +1,220 @@
-/* CSS Reset */
-* {
-  box-sizing: border-box;
-  margin: 2;
-  padding: 2;
-}
+	body {
+		background-image: url("background/image.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: center;
+		font-family: Poppins, sans-serif;
+	}
+	
+	.main-container {
+		margin: 30px auto;
+		background-color: #fff;
+		background: linear-gradient(-135deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.9), rgba(44, 83, 100, 0.9));
+		padding: 20px;
+		border: 1px solid #000;
+		border-radius: 20px;
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+		max-width: 400px;
+	}
+		
+	h1 {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	
+	.audio-container {
+		margin: 20px auto;
+		background-color: #fff;
+		background: linear-gradient(-135deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.9), rgba(44, 83, 100, 0.9));
+		padding: 20px;
+		border: 1px solid #000;
+		border-radius: 20px;
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+		max-width: 400px;
+	}
+	
+	.button-container {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	}
 
-body {
-  font-family: Arial, sans-serif;
-}
+	#previous-button {
+		font-size: 21px;
+	}
 
-.container {
-  max-width: 100px;
-  margin: 0 auto;
-  padding: 20px;
-  background: rgb(84,6,69);
-  background: linear-gradient(-135deg, #0F2027, #203A43, #2C5364);
-  border: 2px solid #ddd;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+	#play-pause-button {
+		font-size: 21px;
+	}
+	
+	#next-button {
+		font-size: 21px;
+	}
+	
+	.button-container button {
+	  background-color: transparent;
+	  border: none;
+	  cursor: pointer;
+	  height: 50px;
+	  margin: 0 10px;
+	  outline: none;
+	  width: 120px;
+	}
 
-h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 30px;
-  text-align: center;
-}
+	.button-container button:hover {
+	  color: #fff;
+	  background-color: #000;
+	}
+	
+	
+	form {
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 20px;
-}
+	label {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
 
-form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+	input[type="number"] {
+		width: 50%;
+		font-size: 17px;
+		padding: 10px;
+		border-radius: 10px;
+		border: 1px solid #ddd;
+		margin-bottom: 20px;
+	}
 
-label {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+	button[type="submit"] {
+		background-color: #0066CC;
+		margin-top: 20px;
+		color: white;
+		font-weight: bold;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 10px;
+		font-size: 20px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
 
-input[type="number"] {
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  margin-bottom: 30px;
-}
+	button[type="submit"]:hover {
+		background-color: #0052a3;
+		transition: background-color 0.3s ease;
+	}
 
-button {
-  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
- background-blend-mode: multiply;
-  background-color: #4CAF50;
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+	#results-container {
+		margin-top: 50px;
+		padding: 20px;
+		background-color: #0F2027;
+		border-radius: 10px;
+		color: white;
+	}
 
-button:hover {
-  background-color: #3e8e41;
-}
+	.discount-input-container label {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+		margin-bottom: 10px;
+	}
 
-#results-container {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #0F2027;
-  border-radius: 5px;
-}
-
-@media (max-width: 200px) {
-input[type="number"] {
-width: 100%;
-}
-}
-
-@media (max-width: 200px) {
-.container {
-padding: 10px;
-}
-
-h1 {
-font-size: 20px;
-}
-
-h2 {
-font-size: 16px;
-}
-
-label {
-font-size: 14px;
-}
-
-input[type="number"] {
-width: 100%;
-font-size: 14px;
-margin-bottom: 10px;
-}
-
-button {
-font-size: 14px;
-}
-
-#results-container {
-margin-top: 30px;
-}
-}
-
-@media (min-width: 800px) {
-.container {
-max-width: 600px;
-}
-}
-
-.discount-input-container label {
-  display: flex;
-  width: 100%;
-  justify-content: center; /* added rule */
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.discount-input-container input[type="number"] {
-  width: 70%;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  margin-bottom: 30px;
-}
+	.discount-input-container input[type="number"] {
+		width: 50%;
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 10px;
+		border: 1px solid #ddd;
+		margin: 0 auto 30px auto;
+		display: block;
+	}
 
 
-button[type="submit"] {
-background-color: #0066CC;
-margin-top: 20px;
-}
+/* Responsive Styles */
+	@media (max-width: 200px) {
+		input[type="number"], .container, h1, h2, label, input[type="number"], button[type="submit"], #results-container {
+		width: 100%;
+		font-size: 14px;
+		}
+	
+	.container {
+		padding: 10px;
+		}
+	
+	#results-container {
+		margin-top: 30px;
+		}
+	}
 
-body {
-  background-color: #f2f2f2;
-}
+	@media (min-width: 800px) {
+	.container {
+		max-width: 600px;
+		}
+	}
+	
+	/* Animation Styles */
+	.glow-on-hover {
+	    width: 220px;
+	    height: 50px;
+	    border: none;
+	    outline: none;
+	    color: #fff;
+	    background: #111;
+	    cursor: pointer;
+	    position: relative;
+	    z-index: 0;
+	    border-radius: 10px;
+	}
+
+	.glow-on-hover:before {
+	    content: '';
+	    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	    position: absolute;
+	    top: -2px;
+	    left:-2px;
+	    background-size: 400%;
+	    z-index: -1;
+	    filter: blur(5px);
+	    width: calc(100% + 4px);
+	    height: calc(100% + 4px);
+	    animation: glowing 20s linear infinite;
+	    opacity: 0;
+	    transition: opacity .3s ease-in-out;
+	    border-radius: 10px;
+	}
+
+	.glow-on-hover:active {
+	    color: #000
+	}
+
+	.glow-on-hover:active:after {
+	    background: transparent;
+	}
+
+	.glow-on-hover:hover:before {
+	    opacity: 1;
+	}
+	
+	.glow-on-hover:after {
+		z-index: -1;
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #111;
+		left: 0;
+		top: 0;
+		border-radius: 10px;
+		transition: opacity .3s ease-in-out;
+	}
+
+	@keyframes glowing {
+	    0% { background-position: 0 0; }
+	    50% { background-position: 400% 0; }
+	    100% { background-position: 0 0; }
+	}
+	
