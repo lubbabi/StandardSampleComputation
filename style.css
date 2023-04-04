@@ -1,10 +1,11 @@
+	/* Base Styles */
 	body {
-		background-image: url("background/image.jpg");
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		background-position: center;
-		font-family: Poppins, sans-serif;
+	  background-image: url("background/image.jpg");
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	  background-position: center;
+	  font-family: Poppins, sans-serif;
 	}
 	
 	.main-container {
@@ -23,50 +24,81 @@
 		margin-bottom: 20px;
 	}
 	
-	.audio-container {
-		margin: 20px auto;
-		background-color: #fff;
-		background: linear-gradient(-135deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.9), rgba(44, 83, 100, 0.9));
-		padding: 20px;
-		border: 1px solid #000;
-		border-radius: 20px;
-		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-		max-width: 400px;
+	/* For screens less than or equal to 600px wide */
+	@media (max-width: 600px) {
+	  .audio-container {
+		margin: 10px;
+		padding: 10px;
+		max-width: 100%;
+	  }
+
+	  .button-container {
+		flex-wrap: wrap;
+		justify-content: center;
+	  }
+
+	  #previous-button,
+	  #play-pause-button,
+	  #next-button {
+      font-size: 16px;
+  }
+
+	  .button-container button {
+		width: 100%;
+		margin: 5px;
+	  }
 	}
-	
+
+/* For screens greater than 600px wide */
+	@media (min-width: 601px) {
+	  .audio-container {
+		margin: 20px auto;
+		max-width: 400px;
+	  }
+
+	  .button-container {
+		justify-content: space-between;
+	  }
+
+	  #previous-button,
+	  #play-pause-button,
+	  #next-button {
+		font-size: 21px;
+	  }
+
+	  .button-container button {
+		width: 120px;
+		margin: 0 10px;
+	  }
+	}
+
+	/* Common styles */
+	.audio-container {
+	  background-color: #fff;
+	  background: linear-gradient(-135deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.9), rgba(44, 83, 100, 0.9));
+	  padding: 20px;
+	  border: 1px solid #000;
+	  border-radius: 20px;
+	  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+	}
+
 	.button-container {
 	  display: flex;
-	  justify-content: space-between;
 	  align-items: center;
 	}
 
-	#previous-button {
-		font-size: 21px;
-	}
-
-	#play-pause-button {
-		font-size: 21px;
-	}
-	
-	#next-button {
-		font-size: 21px;
-	}
-	
 	.button-container button {
 	  background-color: transparent;
 	  border: none;
 	  cursor: pointer;
 	  height: 50px;
-	  margin: 0 10px;
 	  outline: none;
-	  width: 120px;
 	}
 
 	.button-container button:hover {
 	  color: #fff;
 	  background-color: #000;
 	}
-	
 	
 	form {
 		margin-top: 10px;
@@ -108,7 +140,7 @@
 	}
 
 	#results-container {
-		margin-top: 50px;
+		margin-top: 20px;
 		padding: 20px;
 		background-color: #0F2027;
 		border-radius: 10px;
@@ -135,22 +167,31 @@
 
 
 /* Responsive Styles */
-	@media (max-width: 200px) {
-		input[type="number"], .container, h1, h2, label, input[type="number"], button[type="submit"], #results-container {
+	@media (max-width: 727px) {
+		.main-container, .audio-container {
 		width: 100%;
 		font-size: 14px;
 		}
 	
-	.container {
-		padding: 10px;
-		}
-	
+		.button-container {
+		flex-direction: column;
+		align-items: center;
+	  }
+	  
+	  .button-container button {
+		width: 100%;
+		margin: 10px 0;
+	  }
+	  
+	  input[type="number"], label {
+		font-size: 16px;
+	  }
 	#results-container {
 		margin-top: 30px;
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 768px) {
 	.container {
 		max-width: 600px;
 		}
